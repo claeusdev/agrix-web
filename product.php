@@ -9,20 +9,19 @@
 
 	</head>
 	<body>
-		<h3></h3>
-		<div class="dt mw6 center pt0 pv5-m pv6-ns">
-		  <div class="db dtc-ns v-mid-ns">
-		    <img src="img/fresh.jpg" alt="A bright blue sky" class="w-100 mw7 w5-ns" />
+		<article id="productShow">
+			<div class="dt mw6 center pt0 pv5-m pv6-ns">
+		  <div class="db dtc-ns v-mid-ns" id="img">
+		    
 		  </div>
 		  <div class="db dtc-ns v-mid ph2 pr0-ns pl3-ns">
 		    <p class="lh-copy">
-		      <h1>Fresh 2okg box of assorted fruits</h1>
-		      <p>This is a 200kg bag of fresh assorted Fruits.</p>
-		      <p><strong>GHS 250</strong></p>
-		      <p>Farmer's Contact: <strong>0200864593</strong></p>
+		      <h1 id="prodName"></h1>
+		      <p id="desc"></p>
+		      <p id="price"></p>
+		      <p id="farmName"></p>
 		    </p>
-		    
-	    	
+		  
 		  </div>
 		</div>
 
@@ -30,6 +29,8 @@
 			<h3>Locate this farmer</h3>
 		  <div id="map"></div>
 		</div>
+		</article>
+		
 		<script>
 	      function initMap() {
 	        var uluru = {lat: 5.5557, lng: -0.1963};
@@ -46,5 +47,8 @@
 	    <script async defer
 	    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCg6hZoOfQXEI7vni4b9k_snPndBPfUds&callback=initMap">
 	    </script>
+			<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/product.js?ver<%=DateTime.Now.Ticks.ToString()%>"></script>
 	</body>
 </html>
